@@ -26,13 +26,12 @@ module.exports = {
       },
       {
           test: /\.scss$/,
-          loader: ExtractTextPlugin.extract("style", "css!sass")
+          loader: ExtractTextPlugin.extract(["style", "css!sass"])
       }
     ]
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['', '.js'],
-    root: path.resolve('./node_modules')
+    extensions: ['.js', '*']
   }
 };
