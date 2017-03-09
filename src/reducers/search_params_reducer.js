@@ -35,8 +35,8 @@ export default function searchParamsReducer(state = initialState, action) {
 function collectionReducer(state = {}, action) {
   switch (action.type) {
     case TOGGLE_COLLECTION_ITEM:
-      if (state[action.company]) {
-        const { company, ...collection } = state;
+      if (state[action.item]) {
+        const { [action.item], ...collection } = state;
         return collection;
       } else {
         return { ...state, action.company };
