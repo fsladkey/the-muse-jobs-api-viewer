@@ -1,6 +1,6 @@
 var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var path = require('path');
+process.noDeprecation = true
 
 module.exports = {
   context: __dirname,
@@ -18,15 +18,22 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "babel-loader"
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['react', 'latest'] }
+        }],
       },
       {
-          test: /\.scss$/,
-          loader: ExtractTextPlugin.extract(["style", "css!sass"])
+        test: /\.(sass|scss)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ]
       }
     ]
   },
