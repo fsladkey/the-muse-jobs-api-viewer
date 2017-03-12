@@ -1,0 +1,21 @@
+.search-options {
+  display: flex;
+  justify-content: center;
+}
+
+.multi-choice-inputs {
+  display: flex;
+  flex: auto;
+}
+
+.page-buttons {
+  display: flex;
+  justify-content: space-around;
+  p {
+    padding: 10px;
+  }
+}
+
+#company-input {
+  width: 100%;
+}
