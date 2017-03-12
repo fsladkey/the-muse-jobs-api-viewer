@@ -1,0 +1,32 @@
+.header {
+  overflow-y: scroll;
+  font-weight: bold;
+}
+
+.header, .jobs-list {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.table-row {
+  display: flex;
+  border-top: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color ease 500ms;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.col {
+  display: block;
+  width: calc(20% - 1px);
+  padding: 5px 10px;
+  word-wrap: break-word;
+}
+
+.jobs-list {
+  position: relative;
+  overflow: scroll;
+  flex: 1;
+}
