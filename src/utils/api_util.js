@@ -5,4 +5,3 @@ export function fetchJobs(searchParams) {
   const url = BASE_URL + "?" + toQueryString(searchParams);
   return fetch(url).then(response => response.json());
 }
-22
