@@ -1,12 +1,15 @@
 {
-  "name": "muse-coding-challange",
+  "name": "the-muse-jobs-api-viewer",
   "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.js",
+  "description": "Small app to assit with querying The Muse jobs API",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack"
+  },
+  "engines" : {
+    "node": "~6.9.1",
+    "npm":  "~3.10.8"
   },
   "keywords": [],
   "author": "",
