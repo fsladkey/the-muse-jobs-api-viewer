@@ -9,7 +9,8 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, 'build'),
+    publicPath: "/build/"
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -24,7 +25,7 @@ module.exports = {
         exclude: [/node_modules/],
         use: [{
           loader: 'babel-loader',
-          options: { presets: ['react', 'latest'] }
+          options: { presets: ['react', 'latest', 'stage-2'] }
         }],
       },
       {
